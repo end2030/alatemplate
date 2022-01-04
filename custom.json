@@ -1,0 +1,26 @@
+{
+    "menutb" : ["Home Beranda Berita Profil"],
+    "menu" : [
+        "Beranda"
+        ,"Berita"
+        ,"Profil"
+    ],
+    "menusub" : [{
+        "menu":"Beranda",
+        "sub":["Beranda1","Beranda2"]
+    },{
+        "menu":"Berita",
+        "sub":["Berita1","Berita2"]
+    },{
+        "menu":"Profil",
+        "sub":["Profil1","profil2"]
+    }],
+    "action":[
+        "Add"
+        ,"Edit"
+        ,"Delete"
+        ,"Detail"
+        ,"List"
+    ]
+    
+}
