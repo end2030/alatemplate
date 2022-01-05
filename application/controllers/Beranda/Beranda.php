@@ -14,6 +14,7 @@ class Beranda extends CI_Controller
 		);
 
 		$data["field"] = $this->db->list_fields('beranda');
+
 		$this->db->select("*");
 		$this->db->from("beranda");
 		$data["table"] = $this->db->get()->result();
@@ -22,7 +23,8 @@ class Beranda extends CI_Controller
 	}
 	public function simpan()
 	{
-		echo "simpan <pre>";
-		print_r($this->db->list_fields('beranda'));
+		$this->db->insert("beranda",$_POST);
+		$this->session->set_flashdata("simpan","Simpan data berhasil");
+		redirect("beranda/beranda");
 	}
 }

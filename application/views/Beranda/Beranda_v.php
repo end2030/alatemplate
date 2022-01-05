@@ -37,7 +37,7 @@
             <div class="card-body">
               <div class="tab-content p-0">
                 <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;">
-                  <div><?php $action = custom(); ?>
+                  <div><?php $action = custom(); echo $this->session->flashdata("simpan");?>
                     <div class="row">
                       <div class="col-lg-1 col-sm-3">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
@@ -61,6 +61,7 @@
                             <div class="modal-body">
                               <?php
                               foreach ($field as $key => $value) {
+                                if($value!='id'){
                               ?>
                                 <div class="form-group">
                                   <div class="input-group">
@@ -71,6 +72,7 @@
                                   </div>
                                 </div>
                               <?php
+                                }
                               }
                               ?>
                             </div>
